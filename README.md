@@ -146,6 +146,16 @@ cp config.example.yaml config.yaml
 
 填入微信公众号 `appid`/`secret`（推送需要）和图片 API key（生图需要）。不配也能用——自动降级为本地 HTML + 输出图片提示词。
 
+### 自定义项目名称（可选）
+
+如果你 fork 了本项目并想用自己的名称，在 `style.yaml` 中添加：
+
+```yaml
+project_name: "你的项目名称"
+```
+
+这会替换所有用户提示中的 "WeWrite" 为你的自定义名称。不填则默认使用 "WeWrite"。
+
 ## 快速开始
 
 ```

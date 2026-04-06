@@ -2,6 +2,10 @@
 # 复制为 style.yaml 并修改为你的公众号信息
 # 或让 WeWrite 在首次使用时通过对话自动生成
 
+# 项目名称（可选，用于用户提示和消息展示；默认 "WeWrite"）
+# 如果你 fork 了本项目并重命名，可以在这里修改
+# project_name: "WeWrite"
+
 name: "深夜情感站"
 industry: "情感/生活"
 target_audience: "20-35岁都市青年，经历或关注亲密关系、自我成长、情感困惑的读者"

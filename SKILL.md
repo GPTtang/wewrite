@@ -61,7 +61,7 @@ allowed-tools:
      - 内容增强策略（角度发现/密度强化/细节锚定/真实体感）
      - 范文风格库是否命中（用了哪几篇 exemplar，还是 fallback 到种子）
      - playbook 中生效的规则条数
-  2. 如果 history.yaml 无记录或用户指定了外部文章 → 跳过此部分，提示"这篇文章不是 WeWrite 生成的，只做质量检查"
+  2. 如果 history.yaml 无记录或用户指定了外部文章 → 跳过此部分，提示"这篇文章不是 {project_name} 生成的，只做质量检查"
 
   **第二部分：质量检查**（告诉用户哪里还能改）
   1. `python3 {skill_dir}/scripts/humanness_score.py {article_path} --json`
@@ -119,7 +119,7 @@ cd {skill_dir} && git fetch origin main --quiet 2>/dev/null
 
 比对本地 `{skill_dir}/VERSION` 与远程 `git show origin/main:VERSION`：
 - 相同 → 静默通过
-- 不同 → 提示用户："WeWrite 有新版本可用（当前 X → 最新 Y），说「更新」即可升级。"**不阻断流程**，继续 1.3
+- 不同 → 提示用户："{project_name} 有新版本可用（当前 X → 最新 Y），说「更新」即可升级。"**不阻断流程**，继续 1.3
 - git 不可用（无 .git 目录或 fetch 失败）→ 静默跳过
 
 **1.3 加载风格**：
@@ -128,7 +128,7 @@ cd {skill_dir} && git fetch origin main --quiet 2>/dev/null
 检查: {skill_dir}/style.yaml
 ```
 
-- 存在 → 提取 `name`、`topics`、`tone`、`voice`、`blacklist`、`theme`、`cover_style`、`author`、`content_style`
+- 存在 → 提取 `name`、`topics`、`tone`、`voice`、`blacklist`、`theme`、`cover_style`、`author`、`content_style`、`project_name`（默认 "WeWrite"）
 - 不存在 → `读取: {skill_dir}/references/onboard.md`，完成后回到 Step 1
 
 如果用户直接给了选题 → 跳到 Step 3（仍需框架选择和素材采集，不可跳过）。
@@ -465,7 +465,7 @@ python3 {skill_dir}/toolkit/cli.py preview {markdown} --theme {theme} --no-open 
 **8.2 回复用户**：
 
 - 最终标题 + 2 备选 + 摘要 + 5 标签 + media_id
-- 编辑建议："文章有 2-3 个编辑锚点，建议加入你自己的话。你可以在本地 markdown 里改，也可以直接在微信草稿箱改——改完后说**'学习我的修改'**，WeWrite 都能学到你的风格。"
+- 编辑建议："文章有 2-3 个编辑锚点，建议加入你自己的话。你可以在本地 markdown 里改，也可以直接在微信草稿箱改——改完后说**'学习我的修改'**，{project_name} 都能学到你的风格。"
 
 **8.3 后续操作**：
 
