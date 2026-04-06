@@ -2,30 +2,32 @@
 # 复制为 style.yaml 并修改为你的公众号信息
 # 或让 WeWrite 在首次使用时通过对话自动生成
 
-name: "Demo科技"
-industry: "科技/互联网"
-target_audience: "25-40岁互联网从业者、科技爱好者"
+name: "她的生活研究所"
+industry: "生活方式/女性成长"
+target_audience: "25-40岁城市女性，关注个人成长、职场发展、情感关系和生活品质"
 
 # 内容方向
 topics:
-  - AI/人工智能
-  - 产品设计
-  - 创业/商业模式
-  - 效率工具
+  - 职场与成长
+  - 情感与关系
+  - 自我提升
+  - 生活方式/穿搭/美妆
+  - 健康与自律
 
 # 写作风格
-tone: "专业但不学术，有观点但不偏激，偶尔幽默"
-voice: "第一人称，像一个懂行的朋友在分享见解"
+tone: "温暖有共鸣，有观点有故事，像闺蜜在真诚分享"
+voice: "第一人称，像一个懂你的闺蜜在聊真实感受和经历"
 word_count: "1500-2500"
 
 # 内容风格（干货/故事/情绪/热点/测评）
 # 影响选题偏好和框架推荐
-content_style: "干货"
+content_style: "故事"
 
 # 写作人格（决定文章语感和 AI 检测通过率）
 # 可选：midnight-friend / industry-observer / sharp-journalist / warm-editor / cold-analyst
 # 详见 personas/ 目录
-writing_persona: "midnight-friend"
+# 女性生活/情感类账号推荐 warm-editor：故事驱动，温柔共情，追求共鸣
+writing_persona: "warm-editor"
 
 # 禁忌
 blacklist:
@@ -34,16 +36,17 @@ blacklist:
 
 # 参考账号风格
 reference_accounts:
-  - "36氪"
-  - "虎嗅"
-  - "少数派"
+  - "十点读书"
+  - "她说"
+  - "慢慢说"
 
 # 排版
-theme: "professional-clean"
+# elegant-rose：浅粉底，玫瑰点缀，专为女性/生活类账号设计
+theme: "elegant-rose"
 
 # 封面
-cover_style: "简洁科技感，蓝色调，扁平化设计"
+cover_style: "温暖柔和，粉调色彩，简洁有质感，传递真实生活感"
 # cover_template: ""  # 设置后跳过 AI 生成，直接使用该文件
 
 # 署名
-author: "Demo编辑部"
+author: "她的生活研究所"
